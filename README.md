@@ -164,7 +164,7 @@
       <h3 class="text-2xl font-bold mb-2">Contact Electric Film TX</h3>
       <p class="mb-4 text-gray-600">Based in El Paso, TX — serving homes, offices, and vehicles.</p>
       <p class="font-semibold">(915) 238-7947 • electricfilm@outlook.com</p>
-      <p class="mt-2">Instagram: <a href="https://www.instagram.com/electric.film" class="text-blue-600">@electric.film</a></p>
+      <p class="mt-2">Instagram: <a href="[https://www.instagram.com/electric.film](https://www.instagram.com/electricfilmep/)" class="text-blue-600">@electric.film</a></p>
 
       <div class="mt-6">
         <a href="mailto:electricfilm@outlook.com?subject=Quote%20Request" class="bg-blue-600 text-white px-6 py-3 rounded">Email for Quote</a>
