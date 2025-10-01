@@ -110,7 +110,21 @@
 
 <section id="about">
     <h2>About Us</h2>
-    <p>Welcome to Electric Film TX! We provide high-quality window tinting and automotive film services for cars, homes, and businesses. Our goal is to combine style, protection, and privacy for all our clients.</p>
+    <p>At Electric Film, we specialize in smart window tint solutions that combine style, comfort, and cutting-edge technology. Our films provide privacy, UV protection, heat reduction, and an instant upgrade to any space—whether it’s your home, office, or vehicle.
+
+We are committed to delivering high-quality products and professional installation with a focus on customer satisfaction. Our smart window tints are designed to enhance your lifestyle by improving comfort, energy efficiency, and aesthetics without compromising on style.
+
+Why Choose Electric Film?
+
+Smart Technology: Modern, responsive window films that adapt to your needs.
+
+UV & Heat Protection: Keep interiors cool and safe from harmful rays.
+
+Privacy & Style: Enjoy sleek, modern designs while maintaining discretion.
+
+Professional Service: Expert installation and support from start to finish.
+
+Transform your windows with Electric Film and experience the perfect balance of innovation, comfort, and elegance.</p>
 </section>
 
 <section id="services">
@@ -133,8 +147,7 @@
         <button type="submit">Send Message</button>
     </form>
     <p>Email: <a href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a></p>
-    <p>Phone: (Insert your phone number)</p>
-    <p>Address: (Insert your address here)</p>
+    <p>Phone: 915-238-7847 </p>
     <p>Follow us on social media: 
         <a href="https://www.instagram.com/electricfilmep/" target="_blank">Instagram</a>
     </p>
