@@ -19,6 +19,11 @@
             padding: 20px 0;
             text-align: center;
         }
+        header img {
+            max-height: 80px;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
         nav a {
             color: white;
             margin: 0 15px;
@@ -90,6 +95,7 @@
 <body>
 
 <header>
+    <img src="/mnt/data/9087492c-a594-4384-aafe-3c2311033c6.jpg" alt="Electric Film Logo">
     <h1>Electric Film TX</h1>
     <nav>
         <a href="#about">About</a>
