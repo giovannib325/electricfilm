@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,8 +59,10 @@
         }
         .hero {
             background-image: url('https://i.postimg.cc/jWnHKjY6/your-image.jpg');
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center;
+            background-color: #000;
             height: 400px;
             display: flex;
             align-items: center;
@@ -95,7 +98,7 @@
 <body>
 
 <header>
-    <img src="/mnt/data/9087492c-a594-4384-aafe-3c2311033c6.jpg" alt="Electric Film Logo">
+    <img src="https://i.postimg.cc/4Y6NGfDV/logo.jpg" alt="Electric Film Logo">
     <h1>Electric Film TX</h1>
     <nav>
         <a href="#about">About</a>
@@ -110,21 +113,18 @@
 
 <section id="about">
     <h2>About Us</h2>
-    <p>At Electric Film, we specialize in smart window tint solutions that combine style, comfort, and cutting-edge technology. Our films provide privacy, UV protection, heat reduction, and an instant upgrade to any space—whether it’s your home, office, or vehicle.
+    <p>At Electric Film, we specialize in smart window tint solutions that combine style, comfort, and cutting-edge technology. Our films provide privacy, UV protection, heat reduction, and an instant upgrade to any space—whether it’s your home, office, or vehicle.</p>
 
-We are committed to delivering high-quality products and professional installation with a focus on customer satisfaction. Our smart window tints are designed to enhance your lifestyle by improving comfort, energy efficiency, and aesthetics without compromising on style.
+    <p>We are committed to delivering high-quality products and professional installation with a focus on customer satisfaction. Our smart window tints are designed to enhance your lifestyle by improving comfort, energy efficiency, and aesthetics without compromising on style.</p>
 
-Why Choose Electric Film?
+    <ul>
+        <li><strong>Smart Technology:</strong> Modern, responsive window films that adapt to your needs.</li>
+        <li><strong>UV & Heat Protection:</strong> Keep interiors cool and safe from harmful rays.</li>
+        <li><strong>Privacy & Style:</strong> Enjoy sleek, modern designs while maintaining discretion.</li>
+        <li><strong>Professional Service:</strong> Expert installation and support from start to finish.</li>
+    </ul>
 
-Smart Technology: Modern, responsive window films that adapt to your needs.
-
-UV & Heat Protection: Keep interiors cool and safe from harmful rays.
-
-Privacy & Style: Enjoy sleek, modern designs while maintaining discretion.
-
-Professional Service: Expert installation and support from start to finish.
-
-Transform your windows with Electric Film and experience the perfect balance of innovation, comfort, and elegance.</p>
+    <p>Transform your windows with Electric Film and experience the perfect balance of innovation, comfort, and elegance.</p>
 </section>
 
 <section id="services">
@@ -147,7 +147,7 @@ Transform your windows with Electric Film and experience the perfect balance of 
         <button type="submit">Send Message</button>
     </form>
     <p>Email: <a href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a></p>
-    <p>Phone: 915-238-7847 </p>
+    <p>Phone: 915-238-7847</p>
     <p>Follow us on social media: 
         <a href="https://www.instagram.com/electricfilmep/" target="_blank">Instagram</a>
     </p>
@@ -159,3 +159,4 @@ Transform your windows with Electric Film and experience the perfect balance of 
 
 </body>
 </html>
+```
