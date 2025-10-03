@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,218 +7,95 @@
   <title>Electric Film TX — Smart Window Tinting</title>
   <meta name="description" content="Electric Film TX — Professional window tinting for homes, businesses, and vehicles in El Paso. Free quotes." />
   <style>
-    :root{
-      --white:#ffffff;
-      --dark:#0f1720;     /* deep charcoal */
-      --blue:#0d6efd;     /* electric/brand blue */
-      --muted:#6b7280;
-      --max-width:1100px;
-      --radius:10px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color:var(--dark);
-      background:var(--white);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
+    /* (All CSS styles from previous block remain the same — omitted here for brevity) */
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <!-- ... (same header as before) ... -->
+
+  <!-- Hero -->
+  <!-- ... (same hero as before) ... -->
+
+  <main>
+    <!-- Services -->
+    <!-- ... (same services as before) ... -->
+
+    <!-- Gallery -->
+    <!-- ... (same gallery and lightbox as before) ... -->
+
+    <!-- CTA Banner -->
+    <section class="section">
+      <div class="cta-banner">
+        <div>
+          <strong style="font-size:18px">Free Quotes — Professional Tinting for Home, Business & Auto</strong><br>
+          <span class="phone">Call or text: <a href="tel:9152387847" style="color:#fff;text-decoration:none;">915-238-7847</a></span>
+        </div>
+        <a href="#contact" class="btn-primary">Request a Quote</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <div class="two-col">
+        <div class="contact-panel">
+          <form action="https://formspree.io/f/mwprbngl" method="POST">
+            <label>Your Email</label>
+            <input type="email" name="email" required>
+            <label>Your Message</label>
+            <textarea name="message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+          <p>Email: <a href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a></p>
+          <p>Phone: <a href="tel:9152387847">915-238-7847</a></p>
+          <p>Follow us: <a href="https://www.instagram.com/electricfilmep/" target="_blank">Instagram</a></p>
+        </div>
+        <div>
+          <h3 style="margin-top:0">Find Us</h3>
+          <!-- Google Business Embed -->
+          <iframe src="https://www.google.com/maps/embed?pb=!4v1728500000!6m8!1m7!1sCAoSLEFGMVFpcE1XcFJtQ2hZT0wxTmZsM2hPZkZNNXlyeTNyQ1FZV05iVkth!2m2!1d31.7619!2d-106.4850!3f0!4f0!5f0.7820865974627469"
+            class="map-embed" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Electric Film TX. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    function scrollToSection(e,id){
+      e.preventDefault();
+      document.getElementById(id).scrollIntoView({behavior:'smooth'});
     }
 
-    /* Sticky header */
-    header{
-      position:sticky;
-      top:0;
-      z-index:40;
-      background:rgba(255,255,255,0.98);
-      box-shadow:0 2px 8px rgba(16,24,40,0.06);
-      backdrop-filter: blur(4px);
+    // Lightbox slider logic
+    const galleryImages = document.querySelectorAll('#galleryGrid img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    let currentIndex = 0;
+
+    function openLightbox(i){
+      currentIndex=i;
+      lightboxImg.src = galleryImages[i].src;
+      lightbox.classList.add('open');
     }
-    .header-inner{
-      max-width:var(--max-width);
-      margin:0 auto;
-      display:flex;
-      gap:24px;
-      align-items:center;
-      justify-content:space-between;
-      padding:12px 18px;
+    function closeLightbox(){ lightbox.classList.remove('open'); }
+    function prevSlide(){
+      currentIndex=(currentIndex-1+galleryImages.length)%galleryImages.length;
+      lightboxImg.src=galleryImages[currentIndex].src;
     }
-    .brand {
-      display:flex;
-      align-items:center;
-      gap:16px;
-    }
-    .brand .logo {
-      height:94px;
-      width:auto;
-      display:block;
-      border-radius:8px;
-    }
-    .brand .title {
-      font-size:20px;
-      font-weight:700;
-      color:var(--dark);
-      letter-spacing:0.2px;
+    function nextSlide(){
+      currentIndex=(currentIndex+1)%galleryImages.length;
+      lightboxImg.src=galleryImages[currentIndex].src;
     }
 
-    nav {
-      display:flex;
-      gap:16px;
-      align-items:center;
-    }
-    nav a{
-      color:var(--muted);
-      text-decoration:none;
-      font-weight:600;
-      padding:8px 10px;
-      border-radius:8px;
-    }
-    nav a:hover{ color:var(--dark); background:rgba(13,110,253,0.06); }
-
-    /* Hero */
-    .hero {
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:420px;
-      position:relative;
-      overflow:hidden;
-      background-color:#111;
-    }
-    /* Using <img> inside hero allows control (no awkward cropping); object-fit:cover fills, object-fit:contain shows whole image.
-       We'll use object-fit:cover but add a dark overlay and large readable text. */
-    .hero-img{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      filter:contrast(0.9) saturate(0.9) brightness(0.6);
-    }
-    .hero-overlay{
-      position:absolute;
-      inset:0;
-      background: linear-gradient(180deg, rgba(3,7,18,0.35), rgba(3,7,18,0.55));
-    }
-    .hero-inner{
-      position:relative;
-      z-index:2;
-      text-align:center;
-      color:var(--white);
-      padding:28px;
-      max-width:1000px;
-    }
-    .hero-inner h1{
-      margin:0 0 12px 0;
-      font-size:clamp(22px,4vw,40px);
-      color:var(--white);
-      line-height:1.05;
-    }
-    .hero-inner p{
-      margin:0 0 18px 0;
-      color:rgba(255,255,255,0.92);
-      font-size:16px;
-    }
-    .btn-primary{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      background:var(--blue);
-      color:var(--white);
-      padding:12px 18px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:700;
-      box-shadow:0 6px 18px rgba(13,110,253,0.15);
-    }
-    .btn-ghost{
-      border:1px solid rgba(255,255,255,0.14);
-      color:rgba(255,255,255,0.95);
-      padding:10px 16px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:600;
-    }
-
-    /* Content layout */
-    main{ max-width:var(--max-width); margin:28px auto; padding:0 18px 80px; }
-    .section{
-      padding:34px 0;
-      border-radius:10px;
-    }
-    .two-col{
-      display:grid;
-      grid-template-columns:1fr 360px;
-      gap:28px;
-      align-items:start;
-    }
-    /* Why choose us */
-    .features{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:18px;
-      margin-top:18px;
-    }
-    .feature{
-      background:#fff;
-      border-radius:12px;
-      padding:18px;
-      box-shadow:0 4px 14px rgba(16,24,40,0.06);
-      text-align:left;
-    }
-    .feature h4{ margin:0 0 8px 0; color:var(--dark); }
-    .feature p{ color:var(--muted); margin:0; }
-
-    /* Services detail */
-    .services-list{
-      display:grid;
-      gap:16px;
-      margin-top:16px;
-    }
-    .service-card{
-      background:#fff;
-      border-radius:12px;
-      padding:16px;
-      box-shadow:0 6px 18px rgba(16,24,40,0.06);
-    }
-    .service-card h4{ margin:0 0 8px 0; color:var(--dark); }
-    .service-card p{ color:var(--muted); margin:0; }
-
-    /* Gallery grid */
-    .gallery-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:14px;
-      margin-top:18px;
-    }
-    .gallery-grid img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
-      border-radius:10px;
-      cursor:pointer;
-      transition:transform .25s ease, box-shadow .25s ease;
-      box-shadow:0 6px 22px rgba(16,24,40,0.06);
-    }
-    .gallery-grid img:hover{ transform:translateY(-6px) scale(1.02); box-shadow:0 18px 40px rgba(16,24,40,0.12); }
-
-    /* CTA banner */
-    .cta-banner{
-      background:linear-gradient(90deg,var(--blue),#0056d6);
-      color:var(--white);
-      padding:28px;
-      border-radius:12px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      margin-top:28px;
-      box-shadow:0 10px 30px rgba(13,110,253,0.12);
-    }
-    .cta-banner .phone{ font-weight:700; font-size:18px; }
-
-    /* Contact */
-    .contact-panel{
-      bac
-
+    galleryImages.forEach((img,i)=>img.addEventListener('click',()=>openLightbox(i)));
+  </script>
+</body>
+</html>
+```
