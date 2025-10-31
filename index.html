@@ -1,167 +1,105 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Electric Film TX</title>
-  <meta name="description" content="Electric Film TX - Smart window tinting for homes, businesses, and vehicles. Premium quality, energy savings, privacy, and style.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electric Film | Window Tinting Experts</title>
+  <link rel="icon" href="https://postimg.cc/4Y6NGfDV" />
   <style>
-    :root {
-      --primary: #1e1e1e; /* dark gray/black */
-      --accent: #0d6efd;  /* electric blue */
-      --light: #ffffff;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--primary);
-      color: var(--light);
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      padding: 30px 20px;
-    }
-    header img {
-      max-width: 300px;
-      height: auto;
-    }
-    header h1 {
-      font-size: 1.5rem;
-      margin-top: 15px;
-      color: var(--accent);
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #1e293b; background-color: #ffffff; line-height: 1.6; }
+    header { background: #ffffff; padding: 15px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 0 20px; }
+    nav img { height: 80px; }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 25px; }
+    nav ul li a { text-decoration: none; color: #1e293b; font-weight: bold; transition: color 0.3s; }
+    nav ul li a:hover { color: #2563eb; }
+
     .hero {
-      background: url("https://postimg.cc/jWnHKjY6") center/cover no-repeat;
-      text-align: center;
-      padding: 120px 20px;
-      position: relative;
-      color: var(--light);
+      background: linear-gradient(rgba(37, 99, 235, 0.6), rgba(37, 99, 235, 0.6)), url("https://postimg.cc/jWnHKjY6") center/cover no-repeat;
+      color: white; text-align: center; padding: 150px 20px;
     }
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.55); /* overlay for readability */
+    .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 25px; }
+    .hero button {
+      background: white; color: #2563eb; border: none;
+      padding: 12px 25px; font-size: 1.1rem; border-radius: 6px;
+      cursor: pointer; transition: 0.3s;
     }
-    .hero-content {
-      position: relative;
-      z-index: 2;
+    .hero button:hover { background: #e2e8f0; }
+
+    section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center; }
+    .service-box { background: #f8fafc; padding: 25px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .service-box h3 { color: #2563eb; margin-bottom: 10px; }
+
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+    .gallery img { width: 100%; border-radius: 10px; cursor: pointer; transition: transform 0.3s; }
+    .gallery img:hover { transform: scale(1.05); }
+
+    .cta {
+      background: #2563eb; color: white; text-align: center; padding: 60px 20px;
     }
-    .hero-content h2 {
-      font-size: 2.2rem;
-      margin-bottom: 15px;
-      color: var(--accent);
+    .cta h2 { margin-bottom: 20px; font-size: 2rem; }
+    .cta button {
+      background: white; color: #2563eb; border: none;
+      padding: 12px 25px; border-radius: 6px; font-size: 1.1rem; cursor: pointer; transition: 0.3s;
     }
-    .services {
-      max-width: 1100px;
-      margin: 50px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    .services h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: var(--accent);
-    }
-    .services p {
-      margin-bottom: 30px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-    .contact {
-      background: var(--accent);
-      color: var(--light);
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .contact h3 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
-    .contact form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+    .cta button:hover { background: #e2e8f0; }
+
+    .contact label { display: block; margin-top: 15px; }
     .contact input, .contact textarea {
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
+      width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; margin-top: 5px;
     }
     .contact button {
-      padding: 12px;
-      border: none;
-      background: var(--primary);
-      color: var(--light);
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background 0.3s ease;
+      background: #2563eb; color: white; border: none; padding: 12px 20px; border-radius: 6px; margin-top: 15px; cursor: pointer;
     }
-    .contact button:hover {
-      background: #333;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      background: #111;
-    }
+
+    footer { background: #f1f5f9; text-align: center; padding: 20px; font-size: 0.9rem; margin-top: 40px; }
+    footer a { color: #2563eb; text-decoration: none; }
   </style>
+
+  <!-- Lightbox -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
 </head>
+
 <body>
+
   <header>
-    <img src="https://i.postimg.cc/4Y6NGfDV/logo.png" alt="Electric Film Logo">
-    <h1>Smart Window Tinting Solutions</h1>
+    <nav>
+      <img src="https://postimg.cc/4Y6NGfDV" alt="Electric Film Logo" />
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Home, Business & Automotive Window Tinting</h2>
-      <p>Enhance comfort, privacy, and style with our premium smart films. From your car to your office, we bring innovation and protection to every window.</p>
-    </div>
+  <section id="home" class="hero">
+    <h1>Professional Home & Auto Window Tinting in El Paso</h1>
+    <p>Enhance comfort, style, and protection for your vehicle or business.</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Free Quote</button>
   </section>
 
-  <section class="services">
-    <h3>Our Services</h3>
-    <p><strong>Residential Tinting:</strong> Lower energy bills, reduce glare, and add privacy to your home while maintaining clear views.</p>
-    <p><strong>Commercial Tinting:</strong> Protect your office interiors, reduce cooling costs, and create a modern professional look.</p>
-    <p><strong>Automotive Tinting:</strong> Block harmful UV rays, improve driving comfort, and upgrade the style of your vehicle with top-quality films.</p>
-  </section>
+  <section id="services">
+    <h2 style="text-align:center; color:#2563eb; margin-bottom:30px;">Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Automotive Tint</h3>
+        <p>Enhance privacy, reduce glare, and protect your interior from UV damage. Available in multiple shades and heat-rejection options.</p>
+      </div>
+      <div class="service-box">
+        <h3>Residential Tint</h3>
+        <p>Lower energy bills and add comfort to your home with our professional solar control films that block heat and harmful rays.</p>
+      </div>
+      <div class="service-box">
+        <h3>Commercial Tint</h3>
+        <p>Protect your workspace and enh
 
-  <section class="gallery">
-    <img src="https://i.postimg.cc/nMz8ZcvY/1.jpg" alt="Tinting example 1">
-    <img src="https://i.postimg.cc/MX4LS0Z8/2.jpg" alt="Tinting example 2">
-    <img src="https://i.postimg.cc/VSD7HnHN/3.jpg" alt="Tinting example 3">
-    <img src="https://i.postimg.cc/vDp0jQXh/4.jpg" alt="Tinting example 4">
-    <img src="https://i.postimg.cc/JsQKGj8r/5.jpg" alt="Tinting example 5">
-  </section>
-
-  <section class="contact">
-    <h3>Contact Us</h3>
-    <form action="https://formspree.io/f/mwprbngl" method="POST">
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
 
   <footer>
     <p>© 2025 Electric Film TX | Smart Window Tinting for Cars, Homes & Businesses</p>
