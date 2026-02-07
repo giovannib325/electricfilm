@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Get a Quote — Electric Film TX</title>
+  <meta name="description" content="Request a fast quote for smart window tinting in El Paso. Provide sizes, photos, and project details." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <nav class="bg-white shadow-sm fixed w-full z-30 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="font-extrabold text-blue-600 text-lg">Electric Film TX</a>
+      <div class="flex gap-3">
+        <a href="index.html#gallery" class="hidden sm:inline text-sm hover:text-blue-600">Gallery</a>
+        <a href="tel:+19152387947" class="text-sm bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-28 pb-16">
+    <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
+      <section class="bg-white rounded-2xl shadow p-7">
+        <h1 class="text-3xl md:text-4xl font-extrabold">Request a Quote</h1>
+        <p class="text-gray-600 mt-2">
+          Fill this out and we’ll reply with a quote. For best accuracy, include sizes and photos.
+        </p>
+
+        <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
+          <div class="rounded-xl bg-gray-50 p-4">
+            <div class="font-bold">Fast response</div>
+            <div class="text-gray-600">Same-day replies when possible.</div>
+          </div>
+          <div class="rounded-xl bg-gray-50 p-4">
+            <div class="font-bold">Accurate pricing</div>
+            <div class="text-gray-600">Sizes + photos help a lot.</div>
+          </div>
+        </div>
+
+        <div class="mt-6 text-sm text-gray-600">
+          <div class="font-semibold">Phone:</div>
+          <a class="text-blue-600 font-semibold" href="tel:+19152387947">(915) 238-7947</a>
+          <div class="mt-3 font-semibold">Email:</div>
+          <a class="text-blue-600 font-semibold" href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a>
+          <div class="mt-3 font-semibold">WhatsApp:</div>
+          <a class="text-green-600 font-semibold" href="https://wa.me/19152387947" target="_blank" rel="noreferrer">Message us</a>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-2xl shadow p-7">
+        <h2 class="text-xl font-extrabold mb-4">Quote Form</h2>
+
+        <!-- IMPORTANT: Replace FORM_ENDPOINT_HERE with your Formspree endpoint -->
+        <form
+          id="quoteForm"
+          action="FORM_ENDPOINT_HERE"
+          method="POST"
+          class="space-y-4"
+        >
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-semibold">Name</label>
+              <input name="name" required class="mt-1 w-full rounded-xl border px-4 py-3" placeholder="Your name" />
+            </div>
+            <div>
+              <label class="text-sm font-semibold">Phone</label>
+              <input name="phone" required class="mt-1 w-full rounded-xl border px-4 py-3" placeholder="(915) ___-____" />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-semibold">Email (optional)</label>
+              <input name="email" type="email" class="mt-1 w-full rounded-xl border px-4 py-3" placeholder="you@email.com" />
+            </div>
+            <div>
+              <label class="text-sm font-semibold">Project Type</label>
+              <select name="project_type" required class="mt-1 w-full rounded-xl border px-4 py-3">
+                <option value="">Select…</option>
+                <option>Residential</option>
+                <option>Commercial</option>
+                <option>Automotive</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="text-sm font-semibold">Location</label>
+            <input name="location" class="mt-1 w-full rounded-xl border px-4 py-3" placeholder="El Paso, TX" />
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-semibold"># of glass panels</label>
+              <input name="panels" type="number" min="1" class="mt-1 w-full rounded-xl border px-4 py-3" placeholder="Example: 4" />
+            </div>
+            <div>
+              <label class="text-sm font-semibold">Approx sizes (W x H)</label>
+              <input name="sizes" class="mt-1 w-full rounded-xl border px-4 py-3" placeholder='Example: 36"x60", 24"x48"' />
+            </div>
+          </div>
+
+          <div>
+            <label class="text-sm font-semibold">Notes</label>
+            <textarea name="notes" rows="4" class="mt-1 w-full rounded-xl border px-4 py-3" placeholder="Privacy needs, wiring access, timeframe, etc."></textarea>
+          </div>
+
+          <div class="rounded-xl bg-gray-50 p-4 text-sm text-gray-700">
+            <div class="font-semibold">Photos help a lot.</div>
+            Please text photos to <a class="text-blue-600 font-semibold" href="tel:+19152387947">(915) 238-7947</a>
+            or email them to <a class="text-blue-600 font-semibold" href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a>.
+          </div>
+
+          <button class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700" type="submit">
+            Send Quote Request
+          </button>
+
+          <p id="formMsg" class="text-sm text-green-700 hidden">Sent! We’ll reply soon.</p>
+          <p class="text-xs text-gray-500">
+            By submitting, you agree we may contact you about your request.
+          </p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+    © <span id="year"></span> Electric Film TX • El Paso, TX
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('quoteForm');
+    const msg = document.getElementById('formMsg');
+
+    form.addEventListener('submit', async (e) => {
+      // If endpoint isn't set yet, don't intercept; let browser handle (it will fail, but won't block you)
+      if (form.action.includes("https://formspree.io/f/mwprbngl")) return;
+
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch(form.action, { method: "POST", body: data, headers: { "Accept": "application/json" } });
+
+      if (res.ok) {
+        form.reset();
+        msg.classList.remove('hidden');
+        setTimeout(() => msg.classList.add('hidden'), 5000);
+      } else {
+        alert("Something went wrong. Please call or email us.");
+      }
+    });
+  </script>
+</body>
+</html>
+
