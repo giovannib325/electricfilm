@@ -4,28 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Electric Film TX — Smart Window Tinting in El Paso</title>
-  <meta name="description" content="PDLC smart film in El Paso. Switch glass from clear to private instantly. Residential, commercial, and automotive installations." />
+  <meta name="description" content="Electric Film TX installs PDLC smart window film in El Paso. Switch glass from clear to private instantly for homes, offices, and vehicles. Privacy, modern design, and heat/UV control." />
 
   <!-- Favicon (browser tab) -->
   <link rel="icon" href="assets/favicon.png" type="image/png" />
 
-  <!-- Social Preview -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Electric Film TX — Smart Window Tinting in El Paso" />
-  <meta property="og:description" content="Switch glass from clear to private instantly. Request a custom quote." />
+  <meta property="og:description" content="Switch glass from clear to private instantly. Get a fast quote." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/gallery1.jpg" />
+  <meta property="og:url" content="https://www.electricfilmtx.com/" />
+  <meta property="og:image" content="assets/gallery2.jpg" />
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     :root{
+      --brand:#2b6cff; /* matches your logo vibe */
       --bg0:#060812;
       --bg1:#070b14;
       --bg2:#0b1220;
-      --ink:#0f172a;
-      --brand:#2b6cff;   /* electric blue */
-      --brand2:#6ea8ff;
-      --line:rgba(255,255,255,.10);
     }
     html{ scroll-behavior:smooth; }
     .hero-bg{
@@ -34,70 +32,70 @@
         radial-gradient(900px 420px at 90% 20%, rgba(110,168,255,.18), transparent 55%),
         linear-gradient(180deg, var(--bg1), var(--bg2));
     }
-    .glass{
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.10);
-      backdrop-filter: blur(10px);
-    }
-    .soft-shadow{ box-shadow: 0 18px 60px rgba(0,0,0,.35); }
-    .divider{ height:1px; background: linear-gradient(90deg, transparent, rgba(43,108,255,.45), transparent); }
+    .glass{ background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.10); backdrop-filter: blur(10px); }
+    .soft-shadow{ box-shadow: 0 18px 60px rgba(0,0,0,.25); }
 
-    /* reveal on scroll */
+    /* reveal animation */
     .reveal{ opacity:0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.show{ opacity:1; transform:none; }
+    .reveal.show{ opacity:1; transform: translateY(0); }
 
-    /* animated words */
-    .flip-words{ display:inline-grid; vertical-align: bottom; }
-    .flip-words>span{ grid-area:1/1; opacity:0; transform: translateY(12px); animation: wordCycle 8s infinite; }
-    .flip-words>span:nth-child(1){ animation-delay:0s; }
-    .flip-words>span:nth-child(2){ animation-delay:2s; }
-    .flip-words>span:nth-child(3){ animation-delay:4s; }
-    .flip-words>span:nth-child(4){ animation-delay:6s; }
+    /* animated headline word cycling */
+    .flip-words { display:inline-grid; vertical-align: bottom; }
+    .flip-words > span { grid-area: 1/1; opacity:0; transform: translateY(12px); animation: wordCycle 8s infinite; }
+    .flip-words > span:nth-child(1){ animation-delay: 0s;}
+    .flip-words > span:nth-child(2){ animation-delay: 2s;}
+    .flip-words > span:nth-child(3){ animation-delay: 4s;}
+    .flip-words > span:nth-child(4){ animation-delay: 6s;}
     @keyframes wordCycle{
       0%{opacity:0; transform: translateY(12px)}
-      8%{opacity:1; transform: translateY(0)}
-      24%{opacity:1; transform: translateY(0)}
-      32%{opacity:0; transform: translateY(-10px)}
+      7%{opacity:1; transform: translateY(0)}
+      22%{opacity:1; transform: translateY(0)}
+      29%{opacity:0; transform: translateY(-10px)}
       100%{opacity:0}
     }
-
-    /* video card */
-    .media-card{ border-radius: 18px; overflow:hidden; position:relative; }
-    .media-card::after{
-      content:"";
-      position:absolute; inset:0;
-      background: radial-gradient(800px 300px at 30% 20%, rgba(43,108,255,.18), transparent 60%);
-      pointer-events:none;
-    }
-
-    /* subtle hover */
-    .hover-lift{ transition: transform .18s ease, box-shadow .18s ease; }
-    .hover-lift:hover{ transform: translateY(-2px); box-shadow: 0 20px 60px rgba(0,0,0,.12); }
   </style>
+
+  <!-- LocalBusiness SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Electric Film TX",
+    "telephone":"+19152387947",
+    "email":"electricfilm@outlook.com",
+    "address":{"@type":"PostalAddress","addressLocality":"El Paso","addressRegion":"TX","addressCountry":"US"},
+    "areaServed":"El Paso, TX",
+    "sameAs":[
+      "https://www.instagram.com/electric.film",
+      "https://share.google/RTM3aHAkJHucliIzP"
+    ]
+  }
+  </script>
 </head>
 
 <body class="antialiased bg-gray-50 text-gray-900">
 
 <!-- NAV -->
-<nav class="bg-white/85 backdrop-blur fixed w-full z-30 border-b border-gray-100">
+<nav class="bg-white/90 backdrop-blur fixed w-full z-30 border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex items-center justify-between h-20">
 
+      <!-- LOGO (bigger, more visible) -->
       <a href="index.html" class="flex items-center gap-4">
-        <img src="assets/logo.png" alt="Electric Film TX" class="h-12 md:h-14 w-auto object-contain" />
-        <div class="hidden sm:block leading-tight">
-          <div class="text-[15px] font-extrabold text-slate-900">Electric Film TX</div>
+        <span class="bg-white rounded-2xl p-2 shadow-sm border border-gray-100">
+          <img src="assets/logo.png" alt="Electric Film TX" class="h-12 md:h-14 w-auto object-contain drop-shadow-sm" />
+        </span>
+        <div class="leading-tight">
+          <div class="text-[16px] font-extrabold text-slate-900">Electric Film TX</div>
           <div class="text-xs text-gray-500">Smart Window Tinting • El Paso</div>
         </div>
       </a>
 
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium">
         <a href="#about" class="hover:text-[color:var(--brand)]">About</a>
         <a href="#services" class="hover:text-[color:var(--brand)]">Services</a>
         <a href="#gallery" class="hover:text-[color:var(--brand)]">Gallery</a>
-        <a href="quote.html" class="bg-[color:var(--brand)] text-white px-5 py-2.5 rounded-xl font-semibold hover:opacity-95">
-          Get Your Custom Quote
-        </a>
+        <a href="quote.html" class="bg-[color:var(--brand)] text-white px-5 py-2.5 rounded-xl font-semibold hover:opacity-95">Get a Quote</a>
       </div>
 
       <button id="btnMenu" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Open menu">
@@ -111,37 +109,35 @@
       <a class="block py-2" href="#about">About</a>
       <a class="block py-2" href="#services">Services</a>
       <a class="block py-2" href="#gallery">Gallery</a>
-      <a class="inline-block mt-3 bg-[color:var(--brand)] text-white px-5 py-2 rounded-xl font-semibold" href="quote.html">
-        Get Your Custom Quote
-      </a>
+      <a class="inline-block mt-3 bg-[color:var(--brand)] text-white px-5 py-2 rounded-xl font-semibold" href="quote.html">Get a Quote</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero-bg text-white pt-28 pb-16">
+<header class="hero-bg text-white pt-28 pb-14">
   <div class="max-w-7xl mx-auto px-6">
     <div class="grid lg:grid-cols-2 gap-10 items-center">
 
       <div class="reveal">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs mb-4">
           <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          <span>Clean installs • Professional finish • Built for El Paso heat</span>
+          <span>Premium installs • Clean finish • Built for El Paso heat</span>
         </div>
 
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-          Smart film that switches <span class="text-[color:var(--brand2)]">on demand</span>
+          Smart film that switches <span class="text-blue-200">on demand</span>
         </h1>
 
-        <p class="text-lg text-white/85 mt-4 max-w-xl">
-          Instantly transform glass from clear to private for homes, offices, and vehicles — modern privacy without blinds.
+        <p class="text-white/80 mt-4 max-w-xl">
+          PDLC smart film transforms glass from clear to private instantly — ideal for homes, offices, storefronts, and vehicles.
         </p>
 
         <div class="mt-5 text-lg text-white/90">
           Built for:
           <span class="flip-words font-extrabold text-white">
             <span>Privacy</span>
-            <span>Style</span>
+            <span>Modern Style</span>
             <span>UV Protection</span>
             <span>Heat Control</span>
           </span>
@@ -149,16 +145,14 @@
 
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="quote.html" class="bg-white text-slate-900 px-6 py-3 rounded-xl font-semibold soft-shadow hover:opacity-95">
-            Get Your Custom Quote
+            Get My Custom Quote
           </a>
           <a href="#gallery" class="glass px-6 py-3 rounded-xl font-semibold hover:bg-white/10">
-            View Install Photos
+            View Install Gallery
           </a>
         </div>
 
-        <div class="mt-8 divider"></div>
-
-        <div class="mt-5 grid grid-cols-3 gap-4 text-sm text-white/90">
+        <div class="mt-7 grid grid-cols-3 gap-4 text-sm text-white/90">
           <div class="glass rounded-xl p-4">
             <div class="font-extrabold text-white">2–5 hrs</div>
             <div class="text-white/70">Typical install</div>
@@ -168,25 +162,28 @@
             <div class="text-white/70">or wall switch</div>
           </div>
           <div class="glass rounded-xl p-4">
-            <div class="font-extrabold text-white">El Paso</div>
-            <div class="text-white/70">local service</div>
+            <div class="font-extrabold text-white">Local</div>
+            <div class="text-white/70">El Paso service</div>
           </div>
         </div>
       </div>
 
+      <!-- HERO VIDEO (tint-demo.mp4) -->
       <div class="reveal">
-        <div class="media-card soft-shadow" style="height: 420px;">
-          <video class="w-full h-full object-cover" autoplay muted loop playsinline preload="metadata">
-            <source src="assets/tint-demo.mp4" type="video/mp4" />
-          </video>
-
-          <div class="absolute bottom-4 left-4 right-4 glass rounded-xl px-4 py-3 text-sm flex items-center justify-between">
-            <div class="font-semibold">Live demo</div>
-            <div class="text-white/70">clear ⇄ private in seconds</div>
-          </div>
+        <div class="rounded-3xl overflow-hidden soft-shadow border border-white/10 bg-black">
+          <video
+            src="assets/tint-demo.mp4"
+            class="w-full h-[420px] object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="assets/gallery2.jpg"
+          ></video>
         </div>
         <div class="text-xs text-white/60 mt-3">
-          Tip: Keep videos short (3–6s) for fast loading and smooth looping.
+          Real demo (looping): <code>assets/tint-demo.mp4</code>
         </div>
       </div>
 
@@ -194,79 +191,39 @@
   </div>
 </header>
 
-<!-- ABOUT / WHAT IS -->
+<!-- ABOUT -->
 <section id="about" class="py-16">
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
-
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
     <div class="reveal">
-      <h2 class="text-3xl font-extrabold mb-3">What Is Smart Window Tint?</h2>
-
+      <h2 class="text-3xl font-extrabold mb-3">What is Smart Window Tint?</h2>
       <p class="text-gray-700 mb-5">
-        Smart Window Tint — also known as <strong>PDLC (Polymer Dispersed Liquid Crystal) film</strong> — is an advanced optoelectronic
-        layer laminated into glass that lets you switch between <strong>clear</strong> and <strong>private</strong> instantly with electricity.
-        Unlike traditional tint or frosted glass, it gives you <strong>real-time control</strong> without curtains, blinds, or permanent coatings.
+        Smart window tint (PDLC film) is a switchable privacy film installed on glass. With power, it changes from clear to private instantly.
+        It’s a clean, modern upgrade for spaces that need privacy on demand — without curtains or blinds — and it’s perfect for conference rooms,
+        storefronts, partitions, and high-heat environments like El Paso.
       </p>
 
-      <div class="grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
-        <div class="rounded-2xl bg-white shadow-sm p-4 hover-lift">
-          <div class="font-extrabold">Instant privacy</div>
-          <div class="text-gray-600 mt-1">Switch clear ⇄ private on demand.</div>
-        </div>
-        <div class="rounded-2xl bg-white shadow-sm p-4 hover-lift">
-          <div class="font-extrabold">UV + glare reduction</div>
-          <div class="text-gray-600 mt-1">Protect interiors and improve comfort.</div>
-        </div>
-        <div class="rounded-2xl bg-white shadow-sm p-4 hover-lift">
-          <div class="font-extrabold">Modern aesthetics</div>
-          <div class="text-gray-600 mt-1">Clean architectural look—no blinds.</div>
-        </div>
-        <div class="rounded-2xl bg-white shadow-sm p-4 hover-lift">
-          <div class="font-extrabold">Multi-use</div>
-          <div class="text-gray-600 mt-1">Great for offices, homes, and vehicles.</div>
-        </div>
-      </div>
+      <ul class="space-y-2 text-gray-700">
+        <li class="flex gap-2"><span class="text-[color:var(--brand)] font-bold">✓</span> Instant privacy (clear ⇄ private)</li>
+        <li class="flex gap-2"><span class="text-[color:var(--brand)] font-bold">✓</span> Premium modern look — no blinds needed</li>
+        <li class="flex gap-2"><span class="text-[color:var(--brand)] font-bold">✓</span> Great for offices, homes, and commercial glass</li>
+      </ul>
 
       <div class="mt-6 flex flex-wrap gap-3">
-        <a href="quote.html" class="bg-[color:var(--brand)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-95">
-          Request a Quote
-        </a>
-        <a href="#contact" class="border border-gray-300 text-gray-900 px-6 py-3 rounded-xl font-semibold hover:bg-white">
-          Contact
-        </a>
+        <a href="quote.html" class="bg-[color:var(--brand)] text-white px-5 py-3 rounded-xl font-semibold hover:opacity-95">Get a Quote</a>
+        <a href="#contact" class="border border-[color:var(--brand)] text-[color:var(--brand)] px-5 py-3 rounded-xl font-semibold hover:bg-blue-50">Contact</a>
       </div>
     </div>
 
-    <!-- SECOND VIDEO (How it works) -->
     <div class="reveal bg-white rounded-3xl shadow p-6">
-      <div class="text-sm font-extrabold mb-3">How it looks in real life</div>
-
-      <div class="media-card soft-shadow" style="height: 320px;">
-        <video
-          class="w-full h-full object-cover"
-          autoplay muted loop playsinline preload="metadata"
-          poster="assets/gallery2.jpg"
-          onerror="this.style.display='none'; document.getElementById('howFallback').classList.remove('hidden');"
-        >
-          <source src="assets/how-it-works.mp4" type="video/mp4" />
-        </video>
-
-        <img
-          id="howFallback"
-          src="assets/gallery2.jpg"
-          alt="Smart film demo"
-          class="hidden w-full h-full object-cover"
-        />
+      <h3 class="font-extrabold text-lg mb-3">Best use cases</h3>
+      <div class="grid grid-cols-2 gap-3 text-sm">
+        <div class="rounded-xl bg-gray-50 p-4">Conference rooms</div>
+        <div class="rounded-xl bg-gray-50 p-4">Storefront glass</div>
+        <div class="rounded-xl bg-gray-50 p-4">Bathrooms</div>
+        <div class="rounded-xl bg-gray-50 p-4">Office partitions</div>
       </div>
-
-      <p class="text-sm text-gray-600 mt-4">
-        This short loop reinforces what you’re buying: instant control, clean look, and a premium finish.
-      </p>
-
-      <p class="text-xs text-gray-500 mt-2">
-        (If you don’t see this video, rename your second video file to <code>how-it-works.mp4</code> and upload it to <code>assets/</code>.)
-      </p>
+      <p class="mt-5 text-sm text-gray-600">Want fast pricing? Use the quote form — it takes about 60 seconds.</p>
     </div>
-
   </div>
 </section>
 
@@ -279,93 +236,111 @@
     </div>
 
     <div class="mt-10 grid md:grid-cols-3 gap-6">
-      <div class="reveal p-7 bg-gray-50 rounded-3xl shadow-sm hover-lift">
+      <div class="reveal p-7 bg-gray-50 rounded-3xl shadow-sm">
         <h4 class="font-extrabold mb-2">Residential</h4>
-        <p class="text-sm text-gray-600">Bathrooms, bedrooms, entry windows, patios — privacy on demand with a modern look.</p>
+        <p class="text-sm text-gray-600">Bathrooms, bedrooms, patios, and entry glass — privacy on demand with a premium modern finish.</p>
       </div>
-      <div class="reveal p-7 bg-gray-50 rounded-3xl shadow-sm hover-lift">
+      <div class="reveal p-7 bg-gray-50 rounded-3xl shadow-sm">
         <h4 class="font-extrabold mb-2">Commercial & Office</h4>
-        <p class="text-sm text-gray-600">Conference rooms, partitions, storefronts — switch privacy instantly during meetings.</p>
+        <p class="text-sm text-gray-600">Conference rooms, partitions, storefronts — switch privacy instantly during meetings or business hours.</p>
       </div>
-      <div class="reveal p-7 bg-gray-50 rounded-3xl shadow-sm hover-lift">
+      <div class="reveal p-7 bg-gray-50 rounded-3xl shadow-sm">
         <h4 class="font-extrabold mb-2">Automotive</h4>
-        <p class="text-sm text-gray-600">Smart tint solutions + consultation for best results and legal limits.</p>
+        <p class="text-sm text-gray-600">Smart tint solutions and consultation for performance and the cleanest install results.</p>
       </div>
-    </div>
-
-    <div class="reveal mt-10 text-center">
-      <a href="quote.html" class="inline-block bg-[color:var(--brand)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-95">
-        Get Your Custom Quote
-      </a>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing" class="py-14">
-  <div class="max-w-6xl mx-auto px-6 text-center reveal">
-    <h3 class="text-3xl font-extrabold mb-3">Pricing</h3>
-    <p class="text-gray-700">
-      Typical projects: <strong>$30–$42 / ft²</strong> (estimate). Final price depends on glass size, film type, and install complexity.
-    </p>
-    <div class="mt-6 flex justify-center gap-3 flex-wrap">
-      <a href="quote.html" class="bg-[color:var(--brand)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-95">
-        Request a Quote
-      </a>
-      <a href="#contact" class="border border-gray-300 px-6 py-3 rounded-xl font-semibold hover:bg-white">
-        Ask a Question
-      </a>
+<!-- HOW IT LOOKS IN REAL LIFE (uses 2nd video) -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center reveal">
+      <h3 class="text-3xl font-extrabold">How it looks in real life</h3>
+      <p class="text-gray-600 mt-2">A quick view of the switch effect and installation style.</p>
+    </div>
+
+    <div class="mt-10 grid lg:grid-cols-2 gap-6 items-center">
+      <div class="reveal bg-white rounded-3xl shadow p-5">
+        <video
+          src="assets/gallery-demo.mp4"
+          class="w-full h-[360px] object-cover rounded-2xl soft-shadow"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/gallery2.jpg"
+        ></video>
+        <div class="text-xs text-gray-500 mt-3">
+          Looping video: <code>assets/gallery-demo.mp4</code>
+        </div>
+      </div>
+
+      <div class="reveal bg-white rounded-3xl shadow p-6">
+        <h4 class="text-xl font-extrabold">Clean look. Instant control.</h4>
+        <p class="text-gray-700 mt-3">
+          The goal is simple: premium installation and a smooth “clear ⇄ private” transition that looks great in modern spaces.
+          If you want the fastest quote, include panel count + approximate sizes.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="quote.html" class="bg-[color:var(--brand)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-95">
+            Get My Custom Quote
+          </a>
+          <a href="#gallery" class="border border-gray-200 px-6 py-3 rounded-xl font-semibold hover:bg-white">
+            See Photos
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section id="gallery" class="py-16 bg-gray-50">
+<section id="gallery" class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center reveal">
       <h3 class="text-3xl font-extrabold">Gallery</h3>
-      <p class="text-gray-600 mt-2">Real installs convert best — keep adding your projects here.</p>
+      <p class="text-gray-600 mt-2">Real installs — replace these anytime as you add more projects.</p>
     </div>
 
     <div class="mt-10 grid md:grid-cols-3 gap-4">
-      <img class="reveal rounded-3xl shadow object-cover h-56 w-full hover-lift" src="assets/gallery1.jpg" alt="Smart film install 1" />
-      <img class="reveal rounded-3xl shadow object-cover h-56 w-full hover-lift" src="assets/gallery2.jpg" alt="Smart film install 2" />
-      <img class="reveal rounded-3xl shadow object-cover h-56 w-full hover-lift" src="assets/gallery3.jpg" alt="Smart film install 3" />
+      <img class="reveal rounded-3xl shadow object-cover h-56 w-full" src="assets/gallery1.jpg" alt="Smart film install 1" />
+      <img class="reveal rounded-3xl shadow object-cover h-56 w-full" src="assets/gallery2.jpg" alt="Smart film install 2" />
+      <img class="reveal rounded-3xl shadow object-cover h-56 w-full" src="assets/gallery3.jpg" alt="Smart film install 3" />
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-6 text-center reveal">
+<section id="contact" class="py-16 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-6 text-center reveal">
     <h3 class="text-3xl font-extrabold mb-2">Contact</h3>
     <p class="text-gray-600">El Paso, TX • Homes • Offices • Vehicles</p>
 
     <div class="mt-6 inline-flex flex-col gap-2 text-lg">
       <a class="font-semibold hover:text-[color:var(--brand)]" href="tel:+19152387947">(915) 238-7947</a>
       <a class="hover:text-[color:var(--brand)]" href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a>
-      <a class="text-[color:var(--brand)] font-semibold" href="quote.html">Request a Quote</a>
+      <a class="text-[color:var(--brand)] font-semibold" href="https://www.instagram.com/electric.film" target="_blank" rel="noreferrer">Instagram: @electric.film</a>
     </div>
 
     <div class="mt-8 flex justify-center gap-3 flex-wrap">
-      <a href="quote.html" class="bg-[color:var(--brand)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-95">
-        Get Your Custom Quote
-      </a>
-      <a href="mailto:electricfilm@outlook.com?subject=Quote%20Request" class="border border-gray-300 px-6 py-3 rounded-xl font-semibold hover:bg-white">
-        Email
+      <a href="quote.html" class="bg-[color:var(--brand)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-95">Get a Quote</a>
+      <a href="https://share.google/RTM3aHAkJHucliIzP" target="_blank" rel="noreferrer"
+         class="border border-gray-200 px-6 py-3 rounded-xl font-semibold hover:bg-white">
+        View our Google Profile
       </a>
     </div>
   </div>
 </section>
 
 <footer class="bg-[color:var(--bg0)] text-gray-300 py-8">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <div class="mb-2">&copy; <span id="year"></span> Electric Film TX. All rights reserved.</div>
-    <div class="text-sm text-gray-400">Smart Window Tinting • El Paso, TX</div>
+  <div class="max-w-7xl mx-auto px-6 text-center text-sm">
+    © <span id="year"></span> Electric Film TX — El Paso, TX
   </div>
 </footer>
 
-<!-- FLOAT BUTTONS (NO WHATSAPP) -->
+<!-- FLOAT BUTTONS (no WhatsApp) -->
 <div class="fixed bottom-4 right-4 flex flex-col gap-3 z-40">
   <a class="soft-shadow bg-[color:var(--brand)] text-white px-5 py-3 rounded-full font-semibold hover:opacity-95"
      href="tel:+19152387947">Call</a>
