@@ -11,7 +11,7 @@
   <meta property="og:description" content="Switch glass from clear to private instantly. Get a fast quote." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.electricfilmtx.com/" />
-  <meta property="og:image" content="assets/hero-glass.jpg" />
+  <meta property="og:image" content="assets/gallery1.jpg" />
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -73,7 +73,7 @@
     "@context":"https://schema.org",
     "@type":"LocalBusiness",
     "name":"Electric Film TX",
-    "image":"assets/hero-glass.jpg",
+    "image":"assets/gallery1.jpg",
     "telephone":"+19152387947",
     "email":"electricfilm@outlook.com",
     "address":{"@type":"PostalAddress","addressLocality":"El Paso","addressRegion":"TX","addressCountry":"US"},
@@ -81,17 +81,6 @@
     "sameAs":["https://www.instagram.com/electric.film"]
   }
   </script>
-
-  <!-- Google Analytics (optional) - replace G-XXXXXXXXXX -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  -->
 </head>
 
 <body class="antialiased bg-gray-50 text-gray-800">
@@ -100,7 +89,8 @@
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex justify-between items-center py-4">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-extrabold">EF</div>
+        <!-- REPLACED EF WITH YOUR LOGO -->
+        <img src="assets/logo.png" alt="Electric Film TX logo" class="h-10 w-auto object-contain" />
         <div>
           <div class="font-extrabold text-lg text-blue-600 leading-none">Electric Film TX</div>
           <div class="text-xs text-gray-500">Smart Window Tinting • El Paso</div>
@@ -188,17 +178,29 @@
 
       <div class="reveal">
         <div class="tint-demo soft-shadow" style="height: 420px;">
-          <img src="assets/hero-glass.jpg" alt="Smart film tint demo" />
+          <!-- REPLACED HERO IMAGE WITH YOUR LOOPING VIDEO -->
+          <video
+            class="w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source src="assets/tint-demo.mp4" type="video/mp4" />
+          </video>
+
+          <!-- Keep the overlay + frosted effect on top of the video -->
           <div class="tint-overlay"></div>
           <div class="frost"></div>
 
           <div class="absolute bottom-4 left-4 right-4 glass-card rounded-xl px-4 py-3 text-sm flex items-center justify-between">
             <div class="font-semibold">Live effect</div>
-            <div class="text-white/70">tint ⇄ clear animation</div>
+            <div class="text-white/70">tint ⇄ clear demo</div>
           </div>
         </div>
         <div class="text-xs text-white/60 mt-3">
-          Upload a nice photo to <code>assets/hero-glass.jpg</code> (glass/office/window). Later we can swap to real video.
+          Video file: <code>assets/tint-demo.mp4</code>
         </div>
       </div>
     </div>
