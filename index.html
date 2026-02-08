@@ -3,246 +3,169 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Request a Quote — Electric Film TX</title>
-  <meta name="description" content="Request a quote for PDLC smart film installation in El Paso. Fast response, clean installs, privacy on demand." />
+  <title>Electric Film TX — Smart Window Tinting in El Paso</title>
+  <meta name="description" content="PDLC smart window film in El Paso. Switch glass from clear to private instantly. Residential, commercial, and automotive installations." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Request a Quote — Electric Film TX" />
-  <meta property="og:description" content="Get a fast quote for smart window tinting in El Paso." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/quote-image.jpg" />
+  <!-- Social Preview -->
+  <meta property="og:title" content="Electric Film TX — Smart Window Tinting in El Paso" />
+  <meta property="og:description" content="Switch glass from clear to private instantly. Get a fast quote." />
+  <meta property="og:image" content="assets/gallery1.jpg" />
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root { --bg1:#070b14; --bg2:#0b1220; --brand:#2563eb; }
     html { scroll-behavior: smooth; }
-    .hero-bg { background: radial-gradient(1200px 500px at 10% 10%, rgba(37,99,235,.35), transparent 60%),
-                          radial-gradient(800px 400px at 90% 20%, rgba(34,197,94,.16), transparent 55%),
-                          linear-gradient(180deg, var(--bg1), var(--bg2)); }
-    .glass-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.10); backdrop-filter: blur(10px); }
-    .soft-shadow { box-shadow: 0 20px 60px rgba(0,0,0,.35); }
-    .field { border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px 14px; outline: none; width: 100%; }
-    .field:focus { border-color: rgba(37,99,235,.65); box-shadow: 0 0 0 4px rgba(37,99,235,.14); }
+    .hero-bg {
+      background: radial-gradient(1200px 500px at 10% 10%, rgba(37,99,235,.35), transparent 60%),
+                  linear-gradient(180deg, #070b14, #0b1220);
+    }
+    .glass { background: rgba(255,255,255,.08); backdrop-filter: blur(10px); }
+    .reveal { opacity:0; transform: translateY(16px); transition:.7s ease; }
+    .reveal.show { opacity:1; transform:none; }
+
+    .flip span {
+      display:block; position:absolute; opacity:0;
+      animation: flip 8s infinite;
+    }
+    .flip span:nth-child(2){animation-delay:2s}
+    .flip span:nth-child(3){animation-delay:4s}
+    .flip span:nth-child(4){animation-delay:6s}
+    @keyframes flip{
+      0%{opacity:0;transform:translateY(10px)}
+      10%,25%{opacity:1;transform:none}
+      35%{opacity:0;transform:translateY(-10px)}
+    }
   </style>
 </head>
 
-<body class="antialiased bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 antialiased">
 
-  <!-- NAV -->
-  <nav class="bg-white/90 backdrop-blur fixed w-full z-30 border-b border-gray-100">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <a href="index.html" class="flex items-center gap-3">
-          <img src="assets/logo.png" alt="Electric Film TX logo" class="h-10 w-auto object-contain" />
-          <div>
-            <div class="font-extrabold text-lg text-blue-600 leading-none">Electric Film TX</div>
-            <div class="text-xs text-gray-500">Smart Window Tinting • El Paso</div>
-          </div>
+<!-- NAV -->
+<nav class="bg-white fixed w-full z-30 shadow">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/logo.png" class="h-9" alt="Electric Film TX logo">
+      <span class="font-extrabold text-blue-600 text-lg">Electric Film TX</span>
+    </a>
+    <div class="hidden md:flex gap-6 text-sm">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="quote.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Get Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-bg text-white pt-28 pb-20">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div class="reveal">
+      <h1 class="text-4xl md:text-5xl font-extrabold">
+        Smart film that switches<br>
+        <span class="text-blue-300">on demand</span>
+      </h1>
+
+      <p class="mt-4 text-blue-100 max-w-md">
+        Turn glass from clear to private instantly for homes, offices, and vehicles.
+      </p>
+
+      <div class="mt-4 text-lg">
+        Built for&nbsp;
+        <span class="relative inline-block h-6 w-32 overflow-hidden">
+          <span class="flip font-bold">
+            <span>Privacy</span>
+            <span>Style</span>
+            <span>UV Control</span>
+            <span>Heat</span>
+          </span>
+        </span>
+      </div>
+
+      <div class="mt-8 flex gap-4">
+        <a href="quote.html" class="bg-white text-blue-700 px-6 py-3 rounded-xl font-semibold">
+          Get a Quote
         </a>
-
-        <div class="hidden md:flex items-center gap-6 text-sm">
-          <a href="index.html#gallery" class="hover:text-blue-600">Gallery</a>
-          <a href="tel:+19152387947" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Call</a>
-        </div>
-
-        <button id="btnMenu" class="md:hidden p-2 rounded hover:bg-gray-100" aria-label="Open menu">
-          <svg width="22" height="22" fill="none" stroke="currentColor" class="text-gray-700">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M3 12h18M3 18h18"/>
-          </svg>
-        </button>
-      </div>
-
-      <div id="mobileMenu" class="hidden md:hidden pb-4">
-        <a class="block py-2" href="index.html#gallery">Gallery</a>
-        <a class="block py-2 font-semibold text-blue-600" href="tel:+19152387947">Call</a>
+        <a href="#gallery" class="glass px-6 py-3 rounded-xl">
+          View Gallery
+        </a>
       </div>
     </div>
-  </nav>
 
-  <!-- HEADER -->
-  <header class="hero-bg text-white pt-28 pb-10">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card text-xs mb-4">
-          <span class="w-2 h-2 rounded-full bg-green-400"></span>
-          <span>Fast response • Accurate pricing • El Paso</span>
-        </div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Request a Quote</h1>
-        <p class="text-blue-100 mt-3">
-          Fill this out and we’ll reply with a quote. For best accuracy, include sizes and photos.
-        </p>
-      </div>
-    </div>
-  </header>
-
-  <!-- SUCCESS BANNER -->
-  <div id="successBanner" class="hidden max-w-6xl mx-auto px-6 -mt-6">
-    <div class="bg-green-50 border border-green-200 text-green-800 rounded-2xl p-4 shadow-sm">
-      <div class="font-semibold">Sent!</div>
-      <div class="text-sm">Your quote request was submitted. We’ll contact you soon.</div>
+    <div class="reveal">
+      <video
+        class="w-full h-80 object-cover rounded-2xl shadow"
+        autoplay muted loop playsinline>
+        <source src="assets/tint-demo.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
+</header>
 
-  <!-- MAIN -->
-  <main class="max-w-6xl mx-auto px-6 py-12">
-    <div class="grid lg:grid-cols-2 gap-10 items-start">
-
-      <!-- LEFT: IMAGE + CONTACT -->
-      <section class="bg-white rounded-3xl shadow p-6 lg:p-8">
-        <img
-          src="assets/quote-image.jpg"
-          alt="Smart window tint installation"
-          class="w-full h-72 md:h-80 object-cover rounded-2xl soft-shadow"
-        />
-
-        <div class="mt-6 grid sm:grid-cols-2 gap-4">
-          <div class="bg-gray-50 rounded-2xl p-4">
-            <div class="font-extrabold">Fast response</div>
-            <div class="text-sm text-gray-600 mt-1">Same-day replies when possible.</div>
-          </div>
-          <div class="bg-gray-50 rounded-2xl p-4">
-            <div class="font-extrabold">Accurate pricing</div>
-            <div class="text-sm text-gray-600 mt-1">Sizes + photos help a lot.</div>
-          </div>
-        </div>
-
-        <div class="mt-6 border-t pt-6">
-          <div class="font-extrabold text-lg">Prefer to call or text?</div>
-          <div class="mt-2 text-sm text-gray-600">We can price faster if you send photos.</div>
-
-          <div class="mt-4 space-y-2 text-sm">
-            <div><span class="font-semibold">Phone:</span> <a class="text-blue-600 hover:underline" href="tel:+19152387947">(915) 238-7947</a></div>
-            <div><span class="font-semibold">Email:</span> <a class="text-blue-600 hover:underline" href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a></div>
-            <div><span class="font-semibold">WhatsApp:</span> <a class="text-green-600 hover:underline" href="https://wa.me/19152387947" target="_blank" rel="noreferrer">Message us</a></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- RIGHT: FORM -->
-      <section class="bg-white rounded-3xl shadow p-6 lg:p-8">
-        <div class="flex items-center justify-between">
-          <h2 class="text-2xl font-extrabold">Quote Form</h2>
-          <a href="index.html" class="text-sm text-blue-600 hover:underline">Back to site</a>
-        </div>
-
-        <p class="text-sm text-gray-600 mt-2">Fields marked * are recommended for a faster quote.</p>
-
-        <!-- FORM: FORMSPREE -->
-        <form
-          id="quoteForm"
-          action="https://formspree.io/f/mwprbngl"
-          method="POST"
-          class="mt-6 space-y-4"
-        >
-          <!-- Formspree helpers -->
-          <input type="hidden" name="_subject" value="New Quote Request — Electric Film TX" />
-          <input type="hidden" name="_redirect" value="quote.html?sent=1" />
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm font-semibold">Name *</label>
-              <input class="field mt-2" name="name" type="text" placeholder="Your name" required />
-            </div>
-            <div>
-              <label class="text-sm font-semibold">Phone *</label>
-              <input class="field mt-2" name="phone" type="tel" placeholder="(915) 000-0000" required />
-            </div>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm font-semibold">Email (optional)</label>
-              <input class="field mt-2" name="email" type="email" placeholder="you@email.com" />
-            </div>
-            <div>
-              <label class="text-sm font-semibold">Project Type *</label>
-              <select class="field mt-2" name="project_type" required>
-                <option value="" disabled selected>Select one</option>
-                <option>Residential</option>
-                <option>Commercial</option>
-                <option>Automotive</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label class="text-sm font-semibold">Location *</label>
-            <input class="field mt-2" name="location" type="text" placeholder="El Paso, TX" required />
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm font-semibold"># of glass panels</label>
-              <input class="field mt-2" name="panels" type="number" min="0" placeholder="e.g., 6" />
-            </div>
-            <div>
-              <label class="text-sm font-semibold">Approx sizes (W × H)</label>
-              <input class="field mt-2" name="sizes" type="text" placeholder="e.g., 36x72, 24x60" />
-            </div>
-          </div>
-
-          <div>
-            <label class="text-sm font-semibold">Notes</label>
-            <textarea class="field mt-2" name="notes" rows="5" placeholder="Any details (clear → private, rooms, timeline, photos available, etc.)"></textarea>
-          </div>
-
-          <div class="bg-gray-50 rounded-2xl p-4 text-sm text-gray-700">
-            <div class="font-semibold">Photos help a lot.</div>
-            <div class="mt-1">
-              Please text photos to <a class="text-blue-600 hover:underline" href="tel:+19152387947">(915) 238-7947</a>
-              or email them to <a class="text-blue-600 hover:underline" href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a>.
-            </div>
-          </div>
-
-          <button
-            id="submitBtn"
-            type="submit"
-            class="w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 disabled:opacity-60"
-          >
-            Send Quote Request
-          </button>
-
-          <p class="text-xs text-gray-500">
-            By submitting, you agree we may contact you about your request.
-          </p>
-        </form>
-      </section>
-    </div>
-  </main>
-
-  <!-- FLOAT BUTTONS -->
-  <div class="fixed bottom-4 right-4 flex flex-col gap-3 z-40">
-    <a class="bg-blue-600 text-white px-5 py-3 rounded-full font-semibold hover:bg-blue-700 shadow-lg"
-       href="tel:+19152387947">Call</a>
-    <a class="bg-green-600 text-white px-5 py-3 rounded-full font-semibold hover:opacity-95 shadow-lg"
-       href="https://wa.me/19152387947" target="_blank" rel="noreferrer">WhatsApp</a>
-    <a class="bg-white text-gray-900 px-5 py-3 rounded-full font-semibold hover:bg-gray-100 shadow-lg"
-       href="mailto:electricfilm@outlook.com?subject=Quote%20Request">Email</a>
+<!-- ABOUT -->
+<section id="about" class="py-16">
+  <div class="max-w-5xl mx-auto px-6 reveal">
+    <h2 class="text-3xl font-extrabold mb-4">What is Smart Window Tint?</h2>
+    <p class="text-gray-700 max-w-3xl">
+      PDLC smart film lets you switch glass from clear to private instantly using electricity.
+      Clean look, no blinds, perfect for modern spaces.
+    </p>
   </div>
+</section>
 
-  <script>
-    // mobile menu
-    const btn = document.getElementById('btnMenu');
-    const menu = document.getElementById('mobileMenu');
-    btn && btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+<!-- SERVICES -->
+<section id="services" class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+    <div class="reveal p-6 bg-gray-50 rounded-xl shadow">
+      <h3 class="font-bold mb-2">Residential</h3>
+      <p class="text-sm">Bathrooms, bedrooms, entry windows.</p>
+    </div>
+    <div class="reveal p-6 bg-gray-50 rounded-xl shadow">
+      <h3 class="font-bold mb-2">Commercial</h3>
+      <p class="text-sm">Offices, conference rooms, storefronts.</p>
+    </div>
+    <div class="reveal p-6 bg-gray-50 rounded-xl shadow">
+      <h3 class="font-bold mb-2">Automotive</h3>
+      <p class="text-sm">Advanced privacy tint solutions.</p>
+    </div>
+  </div>
+</section>
 
-    // show success banner after Formspree redirect (?sent=1)
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('sent') === '1') {
-      const banner = document.getElementById('successBanner');
-      banner.classList.remove('hidden');
-      // clean URL
-      window.history.replaceState({}, document.title, window.location.pathname);
-    }
+<!-- GALLERY -->
+<section id="gallery" class="py-16 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-4">
+    <img src="assets/gallery1.jpg" class="rounded-xl shadow reveal">
+    <img src="assets/gallery2.jpg" class="rounded-xl shadow reveal">
+    <img src="assets/gallery3.jpg" class="rounded-xl shadow reveal">
+  </div>
+</section>
 
-    // prevent double submits
-    const form = document.getElementById('quoteForm');
-    const submitBtn = document.getElementById('submitBtn');
-    form && form.addEventListener('submit', () => {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-    });
-  </script>
+<!-- CONTACT -->
+<section class="py-16 text-center">
+  <div class="max-w-4xl mx-auto px-6 reveal">
+    <h2 class="text-3xl font-extrabold mb-3">Contact</h2>
+    <p>El Paso, TX</p>
+    <p class="mt-3 font-semibold">
+      <a href="tel:+19152387947">(915) 238-7947</a> •
+      <a href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a>
+    </p>
+    <div class="mt-6">
+      <a href="quote.html" class="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold">
+        Go to Quote Page
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-300 py-6 text-center">
+  © <span id="year"></span> Electric Film TX — El Paso, TX
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const io=new IntersectionObserver(e=>e.forEach(i=>i.isIntersecting&&i.target.classList.add("show")));
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+
 </body>
 </html>
