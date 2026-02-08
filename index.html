@@ -4,9 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Electric Film TX | Smart Window Tinting in El Paso</title>
-  <meta name="description" content="Electric Film TX installs PDLC smart window film in El Paso. Switch glass from clear to private instantly for homes, offices, and vehicles. Clean modern privacy with professional installation." />
+  <meta name="description" content="Electric Film TX installs PDLC smart window film in El Paso. Switch glass from clear to private instantly for homes, offices, and vehicles. Premium look with professional installation." />
 
-  <!-- (Optional) Favicon. If you don't have one yet, this uses your logo temporarily -->
   <link rel="icon" href="assets/logo.png" type="image/png" />
 
   <!-- Open Graph -->
@@ -21,7 +20,7 @@
   <style>
     :root{
       --brand:#2b6cff;
-      --bg0:#060812;
+      --bg0:#050712;
       --bg1:#070b14;
       --bg2:#0b1220;
     }
@@ -32,6 +31,12 @@
         radial-gradient(1100px 550px at 12% 10%, rgba(43,108,255,.35), transparent 60%),
         radial-gradient(900px 420px at 90% 20%, rgba(110,168,255,.18), transparent 55%),
         linear-gradient(180deg, var(--bg1), var(--bg2));
+    }
+
+    .nav-dark{
+      background: rgba(5,7,18,.70);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(12px);
     }
 
     .glass{
@@ -59,13 +64,6 @@
       22%{opacity:1; transform: translateY(0)}
       29%{opacity:0; transform: translateY(-10px)}
       100%{opacity:0}
-    }
-
-    /* integrated nav */
-    .nav-dark{
-      background: rgba(6,8,18,.68);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      backdrop-filter: blur(12px);
     }
 
     /* Lightbox */
@@ -113,29 +111,29 @@
 
 <body class="antialiased bg-gray-50 text-gray-900">
 
-<!-- NAV (integrated, not cheap looking) -->
+<!-- NAV (integrated + BIG logo) -->
 <nav class="nav-dark fixed w-full z-40">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="flex items-center justify-between h-20">
+    <div class="flex items-center justify-between h-24 md:h-28">
 
-      <!-- Bigger logo, integrated -->
+      <!-- Much bigger logo, no box -->
       <a href="index.html" class="flex items-center gap-4">
         <img
           src="assets/logo.png"
           alt="Electric Film TX"
-          class="h-12 md:h-14 lg:h-16 w-auto object-contain"
+          class="h-16 md:h-20 lg:h-24 w-auto object-contain"
         />
-        <div class="leading-tight">
-          <div class="text-white font-extrabold text-[15px] md:text-[16px]">Electric Film TX</div>
-          <div class="text-xs text-white/60">Smart Window Tinting • El Paso</div>
+        <div class="leading-tight hidden sm:block">
+          <div class="text-white font-extrabold text-base md:text-lg">Electric Film TX</div>
+          <div class="text-xs md:text-sm text-white/60">Smart Window Tinting • El Paso</div>
         </div>
       </a>
 
-      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-white/80">
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-white/80">
         <a href="#about" class="hover:text-white">About</a>
         <a href="#services" class="hover:text-white">Services</a>
         <a href="#gallery" class="hover:text-white">Gallery</a>
-        <a href="quote.html" class="bg-[color:var(--brand)] text-white px-5 py-2.5 rounded-xl font-semibold hover:opacity-95">Get a Quote</a>
+        <a href="quote.html" class="bg-[color:var(--brand)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-95">Get a Quote</a>
       </div>
 
       <button id="btnMenu" class="md:hidden p-2 rounded-lg hover:bg-white/10" aria-label="Open menu">
@@ -149,13 +147,13 @@
       <a class="block py-2" href="#about">About</a>
       <a class="block py-2" href="#services">Services</a>
       <a class="block py-2" href="#gallery">Gallery</a>
-      <a class="inline-block mt-3 bg-[color:var(--brand)] text-white px-5 py-2 rounded-xl font-semibold" href="quote.html">Get a Quote</a>
+      <a class="inline-block mt-3 bg-[color:var(--brand)] text-white px-6 py-2.5 rounded-xl font-semibold" href="quote.html">Get a Quote</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero-bg text-white pt-28 pb-14">
+<header class="hero-bg text-white pt-32 md:pt-36 pb-14">
   <div class="max-w-7xl mx-auto px-6">
     <div class="grid lg:grid-cols-2 gap-10 items-center">
 
@@ -214,11 +212,7 @@
           <video
             src="assets/tint-demo.mp4"
             class="w-full h-[420px] object-cover"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
+            autoplay muted loop playsinline preload="metadata"
             poster="assets/gallery2.jpg"
           ></video>
         </div>
@@ -235,12 +229,12 @@
       <h2 class="text-3xl font-extrabold mb-3">What is Smart Window Tint?</h2>
       <p class="text-gray-700 mb-5">
         Smart window tint (PDLC film) is a switchable privacy film installed on glass. With power, it changes from clear to private instantly.
-        It gives a clean, modern look without curtains or blinds, and it is ideal for conference rooms, storefronts, partitions, and residential spaces.
+        It delivers a clean modern look without curtains or blinds, and it is perfect for conference rooms, storefronts, partitions, and residential spaces.
       </p>
 
       <ul class="space-y-2 text-gray-700">
-        <li class="flex gap-2"><span class="text-[color:var(--brand)] font-bold">✓</span> Instant privacy on demand</li>
-        <li class="flex gap-2"><span class="text-[color:var(--brand)] font-bold">✓</span> Modern finish with clean installation</li>
+        <li class="flex gap-2"><span class="text-[color:var(--brand)] font-bold">✓</span> Instant privacy when you need it</li>
+        <li class="flex gap-2"><span class="text-[color:var(--brand)] font-bold">✓</span> Clean finish with professional wiring and install</li>
         <li class="flex gap-2"><span class="text-[color:var(--brand)] font-bold">✓</span> Great for homes, offices, and commercial glass</li>
       </ul>
 
@@ -259,7 +253,7 @@
         <div class="rounded-xl bg-gray-50 p-4">Office partitions</div>
       </div>
       <p class="mt-5 text-sm text-gray-600">
-        Want pricing quickly? Fill out the quote form and we will respond with an estimate and next steps.
+        Want pricing quickly? Fill out the quote form and we will reply with an estimate and next steps.
       </p>
     </div>
   </div>
@@ -280,11 +274,11 @@
       </div>
       <div class="reveal p-7 bg-gray-50 rounded-3xl shadow-sm">
         <h4 class="font-extrabold mb-2">Commercial and Office</h4>
-        <p class="text-sm text-gray-600">Conference rooms, partitions, storefronts with instant privacy when you need it.</p>
+        <p class="text-sm text-gray-600">Conference rooms, partitions, storefronts with instant privacy when needed.</p>
       </div>
       <div class="reveal p-7 bg-gray-50 rounded-3xl shadow-sm">
         <h4 class="font-extrabold mb-2">Automotive</h4>
-        <p class="text-sm text-gray-600">Smart tint solutions and consultation for the cleanest install results.</p>
+        <p class="text-sm text-gray-600">Smart tint solutions and consultation for the cleanest results.</p>
       </div>
     </div>
   </div>
@@ -303,11 +297,7 @@
         <video
           src="assets/gallery-demo.mp4"
           class="w-full h-[360px] object-cover rounded-2xl soft-shadow"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
+          autoplay muted loop playsinline preload="metadata"
           poster="assets/gallery2.jpg"
         ></video>
       </div>
@@ -315,8 +305,8 @@
       <div class="reveal bg-white rounded-3xl shadow p-6">
         <h4 class="text-xl font-extrabold">Clean look. Instant control.</h4>
         <p class="text-gray-700 mt-3">
-          Our focus is simple: professional installation and a smooth clear to private transition that looks great in modern spaces.
-          If you want the most accurate quote, include panel count and approximate sizes.
+          We focus on clean installs and a smooth clear-to-private transition that looks great in modern spaces.
+          For the most accurate quote, include panel count and approximate sizes.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="quote.html" class="bg-[color:var(--brand)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-95">
@@ -411,7 +401,7 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Lightbox for gallery images
+  // Lightbox
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lightboxImg');
 
@@ -428,11 +418,10 @@
   });
 
   lb.addEventListener('click', closeLightbox);
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
-  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 
 </body>
 </html>
+
 
