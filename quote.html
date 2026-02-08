@@ -3,273 +3,278 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Request a Quote — Electric Film TX</title>
-  <meta name="description" content="Request a fast quote for smart window tinting in El Paso. Residential, commercial, and automotive." />
+  <title>Get a Quote | Electric Film TX</title>
+  <meta name="description" content="Request a quote for smart window tint in El Paso. Fast response and accurate pricing. Submit your project details and we’ll reply with an estimate." />
 
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-
-  <meta property="og:title" content="Request a Quote — Electric Film TX" />
-  <meta property="og:description" content="Get a custom quote for smart window tinting in El Paso." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/quote-image.jpg" />
-
+  <link rel="icon" href="assets/logo.png" type="image/png" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     :root{
       --brand:#2b6cff;
-      --bg0:#060812;
+      --bg0:#050712;
       --bg1:#070b14;
       --bg2:#0b1220;
     }
+    html{ scroll-behavior:smooth; }
+
     .hero-bg{
       background:
         radial-gradient(1100px 550px at 12% 10%, rgba(43,108,255,.35), transparent 60%),
         radial-gradient(900px 420px at 90% 20%, rgba(110,168,255,.18), transparent 55%),
         linear-gradient(180deg, var(--bg1), var(--bg2));
     }
-    .glass{ background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.10); backdrop-filter: blur(10px); }
-    .field { border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px 14px; outline: none; width: 100%; }
-    .field:focus { border-color: rgba(43,108,255,.65); box-shadow: 0 0 0 4px rgba(43,108,255,.14); }
+
+    .nav-dark{
+      background: rgba(5,7,18,.70);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(12px);
+    }
+
     .soft-shadow{ box-shadow: 0 18px 60px rgba(0,0,0,.18); }
+
+    /* Lightbox */
+    .lb-hidden { display:none; }
+    .lb-backdrop{
+      position:fixed; inset:0; z-index:60;
+      background: rgba(0,0,0,.78);
+      display:flex; align-items:center; justify-content:center;
+      padding: 18px;
+    }
+    .lb-card{
+      max-width: 1100px;
+      width: 100%;
+      background: rgba(0,0,0,.30);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      overflow:hidden;
+    }
+    .lb-img{
+      width:100%;
+      max-height: 82vh;
+      object-fit: contain;
+      background: #000;
+      display:block;
+    }
   </style>
 </head>
 
-<body class="antialiased bg-gray-50 text-gray-900">
+<body class="bg-gray-50 text-gray-900">
 
-<nav class="bg-white/85 backdrop-blur fixed w-full z-30 border-b border-gray-100">
+<!-- NAV (same as index) -->
+<nav class="nav-dark fixed w-full z-40">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="flex items-center justify-between h-20">
+    <div class="flex items-center justify-between h-24 md:h-28">
       <a href="index.html" class="flex items-center gap-4">
-        <span class="bg-white rounded-2xl p-2 shadow-sm border border-gray-100">
-          <img src="assets/logo.png" alt="Electric Film TX" class="h-12 md:h-14 w-auto object-contain drop-shadow-sm" />
-        </span>
-        <div class="hidden sm:block leading-tight">
-          <div class="text-[15px] font-extrabold text-slate-900">Electric Film TX</div>
-          <div class="text-xs text-gray-500">Smart Window Tinting • El Paso</div>
+        <img src="assets/logo.png" alt="Electric Film TX" class="h-16 md:h-20 lg:h-24 w-auto object-contain" />
+        <div class="leading-tight hidden sm:block">
+          <div class="text-white font-extrabold text-base md:text-lg">Electric Film TX</div>
+          <div class="text-xs md:text-sm text-white/60">Smart Window Tinting • El Paso</div>
         </div>
       </a>
 
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="index.html#gallery" class="hover:text-[color:var(--brand)]">Gallery</a>
-        <a href="tel:+19152387947" class="bg-[color:var(--brand)] text-white px-5 py-2.5 rounded-xl font-semibold hover:opacity-95">Call</a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-white/80">
+        <a href="index.html#gallery" class="hover:text-white">Gallery</a>
+        <a href="tel:+19152387947" class="bg-white/10 text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-white/15">Call</a>
+        <a href="index.html" class="bg-[color:var(--brand)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-95">Back Home</a>
       </div>
-
-      <button id="btnMenu" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Open menu">
-        <svg width="26" height="26" fill="none" stroke="currentColor" class="text-gray-700">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h20M3 12h20M3 18h20"/>
-        </svg>
-      </button>
-    </div>
-
-    <div id="mobileMenu" class="hidden md:hidden pb-6">
-      <a class="block py-2" href="index.html#gallery">Gallery</a>
-      <a class="inline-block mt-3 bg-[color:var(--brand)] text-white px-5 py-2 rounded-xl font-semibold" href="tel:+19152387947">Call</a>
     </div>
   </div>
 </nav>
 
-<header class="hero-bg text-white pt-28 pb-10">
+<!-- HEADER -->
+<header class="hero-bg pt-32 md:pt-36 pb-10 text-white">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs mb-4">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span>Professional quoting • Fast turnaround • Local El Paso service</span>
-      </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Request Your Custom Quote</h1>
-      <p class="text-white/80 mt-3">
-        Share a few details and we’ll respond with pricing and next steps.
-      </p>
-    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold">Request a Quote</h1>
+    <p class="text-white/80 mt-3 max-w-2xl">
+      Share your project details and we will reply with a quote. For the most accurate pricing, include panel count and approximate sizes.
+    </p>
   </div>
 </header>
 
-<div id="successBanner" class="hidden max-w-7xl mx-auto px-6 -mt-6">
-  <div class="bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl p-4 shadow-sm">
-    <div class="font-semibold">Sent!</div>
-    <div class="text-sm">Your quote request was submitted. We’ll contact you soon.</div>
-  </div>
-</div>
+<!-- MAIN -->
+<main class="-mt-10 pb-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-8">
 
-<main class="max-w-7xl mx-auto px-6 py-12">
-  <div class="grid lg:grid-cols-2 gap-10 items-start">
+      <!-- LEFT: trust + image + google -->
+      <section class="bg-white rounded-3xl shadow p-6 soft-shadow">
+        <h2 class="text-xl font-extrabold">What you get</h2>
 
-    <!-- LEFT -->
-    <section class="bg-white rounded-3xl shadow p-6 lg:p-8">
-      <img
-        src="assets/quote-image.jpg"
-        alt="Smart window tint installation"
-        class="w-full h-72 md:h-80 object-cover rounded-2xl soft-shadow"
-      />
-
-      <div class="mt-6 grid sm:grid-cols-2 gap-4">
-        <div class="bg-gray-50 rounded-2xl p-4">
-          <div class="font-extrabold">Quick turnaround</div>
-          <div class="text-sm text-gray-600 mt-1">We reply fast — often the same day.</div>
-        </div>
-        <div class="bg-gray-50 rounded-2xl p-4">
-          <div class="font-extrabold">Accurate estimate</div>
-          <div class="text-sm text-gray-600 mt-1">Sizes + photos help us price it right the first time.</div>
-        </div>
-      </div>
-
-      <div class="mt-6 border-t pt-6">
-        <div class="font-extrabold text-lg">Prefer to call?</div>
-        <div class="mt-2 text-sm text-gray-600">We can walk you through options and pricing.</div>
-
-        <div class="mt-4 space-y-2 text-sm">
-          <div>
-            <span class="font-semibold">Phone:</span>
-            <a class="text-[color:var(--brand)] hover:underline" href="tel:+19152387947">(915) 238-7947</a>
+        <div class="mt-5 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-gray-50 p-4">
+            <div class="font-extrabold">Fast response</div>
+            <div class="text-sm text-gray-600 mt-1">We reply quickly, often same day, with clear next steps.</div>
           </div>
-          <div>
-            <span class="font-semibold">Email:</span>
-            <a class="text-[color:var(--brand)] hover:underline" href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a>
+          <div class="rounded-2xl bg-gray-50 p-4">
+            <div class="font-extrabold">Accurate pricing</div>
+            <div class="text-sm text-gray-600 mt-1">Sizes and photos help us quote correctly the first time.</div>
           </div>
+        </div>
 
-          <!-- Google Profile button -->
-          <div class="pt-3">
+        <!-- Quote image (click to enlarge) -->
+        <div class="mt-6">
+          <img
+            src="assets/quote-image.jpg"
+            alt="Smart film example"
+            class="w-full h-72 md:h-80 object-cover rounded-3xl shadow cursor-zoom-in"
+            data-lightbox
+          />
+          <div class="text-xs text-gray-500 mt-2">Click the photo to enlarge.</div>
+        </div>
+
+        <!-- Google profile -->
+        <div class="mt-6 rounded-3xl border border-gray-200 p-5">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <div class="text-sm text-gray-500">Reviews</div>
+              <div class="text-lg font-extrabold">See our Google Business Profile</div>
+              <div class="text-sm text-gray-600 mt-1">
+                Check photos, reviews, and business info before you request your quote.
+              </div>
+            </div>
             <a
               href="https://share.google/RTM3aHAkJHucliIzP"
               target="_blank"
               rel="noreferrer"
-              class="inline-flex items-center gap-2 border border-gray-200 rounded-xl px-4 py-2.5 hover:bg-gray-50 font-semibold"
+              class="shrink-0 bg-[color:var(--brand)] text-white px-4 py-2 rounded-xl font-semibold hover:opacity-95"
             >
-              <span class="text-gray-700">View our Google Profile</span>
-              <span class="text-gray-400">↗</span>
+              View
             </a>
-            <div class="text-xs text-gray-500 mt-2">
-              See our business profile, reviews, photos, and directions.
+          </div>
+        </div>
+
+        <div class="mt-6 text-sm text-gray-700">
+          Prefer to talk first?
+          <a class="font-semibold text-[color:var(--brand)] hover:underline" href="tel:+19152387947">(915) 238-7947</a>
+          <span class="text-gray-400"> | </span>
+          <a class="font-semibold text-[color:var(--brand)] hover:underline" href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a>
+        </div>
+      </section>
+
+      <!-- RIGHT: FORM -->
+      <section class="bg-white rounded-3xl shadow p-6 soft-shadow">
+        <h2 class="text-xl font-extrabold">Quote Form</h2>
+        <p class="text-sm text-gray-600 mt-2">Fill this out and we’ll contact you with pricing and scheduling.</p>
+
+        <form
+          id="quoteForm"
+          action="https://formspree.io/f/mwprbngl"
+          method="POST"
+          class="mt-6 space-y-4"
+        >
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-semibold">Name</label>
+              <input name="name" required class="mt-1 w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+            </div>
+            <div>
+              <label class="text-sm font-semibold">Phone</label>
+              <input name="phone" required class="mt-1 w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300" />
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- RIGHT FORM -->
-    <section class="bg-white rounded-3xl shadow p-6 lg:p-8">
-      <div class="flex items-center justify-between">
-        <h2 class="text-2xl font-extrabold">Quote Form</h2>
-        <a href="index.html" class="text-sm text-[color:var(--brand)] hover:underline">Back to site</a>
-      </div>
-
-      <p class="text-sm text-gray-600 mt-2">Email is required so we can send your estimate in writing.</p>
-
-      <form
-        id="quoteForm"
-        action="https://formspree.io/f/mwprbngl"
-        method="POST"
-        class="mt-6 space-y-4"
-      >
-        <input type="hidden" name="_subject" value="New Quote Request — Electric Film TX" />
-        <input type="hidden" name="_redirect" value="https://electricfilmtx.com/quote.html?sent=1" />
-
-        <div class="grid sm:grid-cols-2 gap-4">
           <div>
-            <label class="text-sm font-semibold">Name *</label>
-            <input class="field mt-2" name="name" type="text" placeholder="Your name" required />
+            <label class="text-sm font-semibold">Email</label>
+            <input name="email" type="email" required class="mt-1 w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300" />
           </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-semibold">Project Type</label>
+              <select name="project_type" required class="mt-1 w-full rounded-xl border border-gray-200 px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-300">
+                <option>Residential</option>
+                <option>Commercial</option>
+                <option>Automotive</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">Location</label>
+              <input name="location" required placeholder="El Paso, TX" class="mt-1 w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-semibold">Number of glass panels</label>
+              <input name="panels" required class="mt-1 w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+            </div>
+            <div>
+              <label class="text-sm font-semibold">Approx sizes (W x H)</label>
+              <input name="sizes" placeholder="Example: 36x72" class="mt-1 w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+            </div>
+          </div>
+
           <div>
-            <label class="text-sm font-semibold">Phone *</label>
-            <input class="field mt-2" name="phone" type="tel" placeholder="(915) 000-0000" required />
+            <label class="text-sm font-semibold">Notes</label>
+            <textarea name="notes" rows="4" placeholder="Tell us what you need and any details that matter."
+              class="mt-1 w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
           </div>
-        </div>
 
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="text-sm font-semibold">Email *</label>
-            <input class="field mt-2" name="email" type="email" placeholder="you@email.com" required />
+          <div class="rounded-2xl bg-gray-50 p-4 text-sm text-gray-700">
+            <div class="font-semibold">Photos help a lot.</div>
+            <div class="text-gray-600 mt-1">
+              After submitting, you can text photos to
+              <a class="font-semibold text-[color:var(--brand)] hover:underline" href="tel:+19152387947">(915) 238-7947</a>
+              or email them to
+              <a class="font-semibold text-[color:var(--brand)] hover:underline" href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a>.
+            </div>
           </div>
-          <div>
-            <label class="text-sm font-semibold">Project Type *</label>
-            <select class="field mt-2" name="project_type" required>
-              <option value="" disabled selected>Select one</option>
-              <option>Residential</option>
-              <option>Commercial</option>
-              <option>Automotive</option>
-            </select>
-          </div>
-        </div>
 
-        <div>
-          <label class="text-sm font-semibold">Location *</label>
-          <input class="field mt-2" name="location" type="text" placeholder="El Paso, TX" required />
-        </div>
+          <button
+            type="submit"
+            class="w-full bg-[color:var(--brand)] text-white py-4 rounded-2xl font-extrabold text-lg hover:opacity-95"
+          >
+            Send Quote Request
+          </button>
 
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="text-sm font-semibold"># of glass panels</label>
-            <input class="field mt-2" name="panels" type="number" min="0" placeholder="e.g., 6" />
-          </div>
-          <div>
-            <label class="text-sm font-semibold">Approx sizes (W × H)</label>
-            <input class="field mt-2" name="sizes" type="text" placeholder="e.g., 36x72, 24x60" />
-          </div>
-        </div>
+          <p class="text-xs text-gray-500 text-center">
+            By submitting, you agree we may contact you about your request.
+          </p>
+        </form>
 
-        <div>
-          <label class="text-sm font-semibold">Notes</label>
-          <textarea class="field mt-2" name="notes" rows="5" placeholder="Any details (rooms, timeline, clear → private, etc.)"></textarea>
-        </div>
-
-        <div class="bg-gray-50 rounded-2xl p-4 text-sm text-gray-700">
-          <div class="font-semibold">Want the most accurate quote?</div>
-          <div class="mt-1">
-            Text photos to <a class="text-[color:var(--brand)] hover:underline" href="tel:+19152387947">(915) 238-7947</a>
-            or email them to <a class="text-[color:var(--brand)] hover:underline" href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a>.
-          </div>
-        </div>
-
-        <button
-          id="submitBtn"
-          type="submit"
-          class="w-full bg-[color:var(--brand)] text-white px-6 py-3 rounded-xl font-semibold hover:opacity-95 disabled:opacity-60"
-        >
-          Send Quote Request
-        </button>
-
-        <p class="text-xs text-gray-500">
-          By submitting, you agree we may contact you about your request.
-        </p>
-      </form>
-    </section>
-
+      </section>
+    </div>
   </div>
 </main>
 
 <footer class="bg-[color:var(--bg0)] text-gray-300 py-8">
   <div class="max-w-7xl mx-auto px-6 text-center text-sm">
-    © <span id="year"></span> Electric Film TX — El Paso, TX
+    © <span id="year"></span> Electric Film TX | El Paso, TX
   </div>
 </footer>
 
-<!-- FLOAT BUTTONS (no WhatsApp) -->
-<div class="fixed bottom-4 right-4 flex flex-col gap-3 z-40">
-  <a class="soft-shadow bg-[color:var(--brand)] text-white px-5 py-3 rounded-full font-semibold hover:opacity-95"
-     href="tel:+19152387947">Call</a>
-  <a class="soft-shadow bg-white text-gray-900 px-5 py-3 rounded-full font-semibold hover:bg-gray-100"
-     href="mailto:electricfilm@outlook.com?subject=Quote%20Request">Email</a>
+<!-- Lightbox -->
+<div id="lightbox" class="lb-hidden">
+  <div class="lb-backdrop" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="lb-card">
+      <img id="lightboxImg" class="lb-img" alt="Preview" />
+    </div>
+  </div>
 </div>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-  const btn = document.getElementById('btnMenu');
-  const menu = document.getElementById('mobileMenu');
-  btn && btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  // Lightbox for quote image
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
 
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("sent") === "1") {
-    document.getElementById("successBanner").classList.remove("hidden");
-    window.history.replaceState({}, document.title, window.location.pathname);
+  function closeLightbox(){
+    lb.classList.add('lb-hidden');
+    lbImg.src = '';
   }
 
-  const form = document.getElementById('quoteForm');
-  const submitBtn = document.getElementById('submitBtn');
-  form && form.addEventListener('submit', () => {
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
+  document.querySelectorAll('[data-lightbox]').forEach(img => {
+    img.addEventListener('click', () => {
+      lbImg.src = img.src;
+      lb.classList.remove('lb-hidden');
+    });
   });
+
+  lb.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 
 </body>
