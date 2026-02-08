@@ -25,120 +25,123 @@
   </div>
 </nav>
 
-<!-- CONTENT -->
 <main class="pt-28 pb-20">
-  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+  <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-start">
 
-    <!-- LEFT INFO -->
-    <div>
-      <h1 class="text-3xl font-extrabold mb-4">Request a Quote</h1>
-      <p class="text-gray-600 mb-6">
-        Fill this out and we’ll reply with pricing.  
-        For best accuracy, include sizes and photos.
+    <!-- LEFT -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <!-- ✅ THIS IS THE IMAGE YOU WANTED -->
+      <img
+        src="assets/quote-image.jpg"
+        alt="Smart window tint installation"
+        class="w-full h-72 object-cover rounded-2xl shadow"
+        onerror="this.style.display='none'; document.getElementById('imgFallback').classList.remove('hidden');"
+      />
+      <div id="imgFallback" class="hidden mt-4 p-4 rounded-xl bg-yellow-50 border border-yellow-200 text-sm text-yellow-900">
+        Image not loading. Check that <b>assets/quote-image.jpg</b> exists and matches the filename exactly.
+      </div>
+
+      <h1 class="text-3xl font-extrabold mt-6">Request a Quote</h1>
+      <p class="text-gray-600 mt-2">
+        Fill this out and we’ll reply with pricing. For best accuracy, include sizes and photos.
       </p>
 
-      <div class="space-y-4 text-sm">
-        <div>
-          <strong>Fast response</strong><br>
-          Same-day replies when possible.
+      <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="rounded-xl bg-gray-50 p-4">
+          <div class="font-bold">Fast response</div>
+          <div class="text-gray-600">Same-day replies when possible.</div>
         </div>
-        <div>
-          <strong>Accurate pricing</strong><br>
-          Sizes + photos help a lot.
+        <div class="rounded-xl bg-gray-50 p-4">
+          <div class="font-bold">Accurate pricing</div>
+          <div class="text-gray-600">Sizes + photos help a lot.</div>
         </div>
       </div>
 
-      <div class="mt-8 space-y-2 text-sm">
-        <div><strong>Phone:</strong> <a href="tel:+19152387947" class="text-blue-600">(915) 238-7947</a></div>
-        <div><strong>Email:</strong> electricfilm@outlook.com</div>
-        <div><strong>WhatsApp:</strong> <a href="https://wa.me/19152387947" class="text-green-600">Message us</a></div>
+      <div class="mt-6 text-sm">
+        <div><b>Phone:</b> <a class="text-blue-600" href="tel:+19152387947">(915) 238-7947</a></div>
+        <div class="mt-2"><b>Email:</b> <a class="text-blue-600" href="mailto:electricfilm@outlook.com">electricfilm@outlook.com</a></div>
+        <div class="mt-2"><b>WhatsApp:</b> <a class="text-green-600" href="https://wa.me/19152387947" target="_blank" rel="noreferrer">Message us</a></div>
       </div>
-    </div>
+    </section>
 
-    <!-- FORM -->
-    <div class="bg-white rounded-2xl shadow p-6">
+    <!-- RIGHT: FORM -->
+    <section class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-2xl font-extrabold">Quote Form</h2>
+      <p class="text-sm text-gray-600 mt-2">Submit this form and we’ll contact you with a quote.</p>
 
-      <!-- SUCCESS MESSAGE -->
-      <div id="successMsg" class="hidden mb-4 p-4 rounded bg-green-100 text-green-800 text-sm">
+      <div id="successMsg" class="hidden mt-4 p-4 rounded bg-green-100 text-green-800 text-sm">
         ✅ Thank you! Your quote request was sent successfully.
       </div>
 
       <form
+        id="quoteForm"
         action="https://formspree.io/f/mwprbngl"
         method="POST"
+        class="mt-6 space-y-4"
       >
-
-        <!-- REQUIRED FOR FORMSPREE -->
         <input type="hidden" name="_subject" value="New Quote Request — Electric Film TX">
         <input type="hidden" name="_redirect" value="https://electricfilmtx.com/quote.html?sent=1">
 
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid sm:grid-cols-2 gap-4">
           <div>
             <label class="text-sm font-semibold">Name</label>
-            <input name="name" required class="w-full border rounded px-3 py-2" />
+            <input name="name" required class="mt-1 w-full border rounded-lg px-3 py-2" />
           </div>
           <div>
             <label class="text-sm font-semibold">Phone</label>
-            <input name="phone" required class="w-full border rounded px-3 py-2" />
+            <input name="phone" required class="mt-1 w-full border rounded-lg px-3 py-2" />
           </div>
         </div>
 
-        <div class="mt-4">
-          <label class="text-sm font-semibold">Email (optional)</label>
-          <input name="email" type="email" class="w-full border rounded px-3 py-2" />
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm font-semibold">Email (optional)</label>
+            <input name="email" type="email" class="mt-1 w-full border rounded-lg px-3 py-2" />
+          </div>
           <div>
             <label class="text-sm font-semibold">Project Type</label>
-            <select name="project_type" class="w-full border rounded px-3 py-2">
+            <select name="project_type" class="mt-1 w-full border rounded-lg px-3 py-2">
               <option>Residential</option>
               <option>Commercial</option>
               <option>Automotive</option>
             </select>
           </div>
-          <div>
-            <label class="text-sm font-semibold">Location</label>
-            <input name="location" class="w-full border rounded px-3 py-2" />
-          </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-4 mt-4">
+        <div>
+          <label class="text-sm font-semibold">Location</label>
+          <input name="location" class="mt-1 w-full border rounded-lg px-3 py-2" placeholder="El Paso, TX" />
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
           <div>
             <label class="text-sm font-semibold"># of glass panels</label>
-            <input name="panels" class="w-full border rounded px-3 py-2" />
+            <input name="panels" class="mt-1 w-full border rounded-lg px-3 py-2" />
           </div>
           <div>
             <label class="text-sm font-semibold">Approx sizes (W × H)</label>
-            <input name="sizes" class="w-full border rounded px-3 py-2" />
+            <input name="sizes" class="mt-1 w-full border rounded-lg px-3 py-2" />
           </div>
         </div>
 
-        <div class="mt-4">
+        <div>
           <label class="text-sm font-semibold">Notes</label>
-          <textarea name="notes" rows="4" class="w-full border rounded px-3 py-2"></textarea>
+          <textarea name="notes" rows="4" class="mt-1 w-full border rounded-lg px-3 py-2"></textarea>
         </div>
 
-        <p class="text-xs text-gray-500 mt-4">
-          Photos help a lot. Please text photos to
-          <strong>(915) 238-7947</strong> or email them to
-          <strong>electricfilm@outlook.com</strong>.
-        </p>
-
-        <button
-          type="submit"
-          class="mt-6 w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700"
-        >
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700">
           Send Quote Request
         </button>
 
+        <p class="text-xs text-gray-500">
+          Photos help a lot. Text photos to (915) 238-7947 or email electricfilm@outlook.com.
+        </p>
       </form>
-    </div>
+    </section>
 
   </div>
 </main>
 
-<!-- FOOTER -->
 <footer class="bg-gray-900 text-gray-300 py-6 text-center text-sm">
   © <span id="year"></span> Electric Film TX — El Paso, TX
 </footer>
@@ -155,4 +158,3 @@
 
 </body>
 </html>
-
